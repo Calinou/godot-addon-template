@@ -30,7 +30,7 @@ If you want to publish to Itch.io, you need to add the following secrets to your
 
 * `ITCHIO_SECRET` - This is the secret key for your Itch.io page. You can find it in your addon's settings on Itch.io.
 
-There are mor options to this. Please check out the respective action's documentation.
+There are more options to this. Please check out the [respective action's documentation](https://github.com/KikimoraGames/itch-publish).
 
 
 
