@@ -59,3 +59,24 @@ This will:
 * Create a GitHub release, with the changelog as the release notes
 
 Once the release job was run, the workflow will then run two other jobs to publish to Itch.io and the Godot Asset Library.
+
+
+## How to do a version bump?
+`release.yml` will automatically determine if and how to bump the version using the [Git Hub Action `mathieudutour/github-tag-action`](https://github.com/marketplace/actions/github-tag). It will do this by looking at the commit messages of the commits that are on the branch.
+
+If you look closely, `release.yml` defines the keywords that are used to determine the version bump with the `custom_release_rules`, but these are in addition to the default Angular Commit Message Convention (see below). The pattern is always:
+
+  ```
+  <keyword>:<release type>:<changelog_section>
+  ```
+
+where `release_type` is one of ``major``, ``minor`` or ``patch`` and `changelog_section` is a free-form string, which defines a header in the `CHANGELOG.md`. If left empty, it defaults to the Angular defaults. See [Angular Commit Message Convention for more info](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular)
+
+### Examples
+
+Appears under "Performance Improvements" header, and under "Breaking Changes" with the breaking change explanation:
+```
+perf: pooled HTTP connections
+
+BREAKING CHANGE: Removed legacy ClientAPI
+```
