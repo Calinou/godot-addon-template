@@ -20,6 +20,9 @@ This PAT needs to have the `repo` scope.
 
 Once you have created this PAT, you need to add it to the repository secrets as `PAT`.
 
+##### Why not use `GITHUB_TOKEN`?
+`GITHUB_TOKEN` does not allow commits back to the same repo for security reasons. Hence, we need this specific PAT to allow committing back.
+
 #### Godot Asset Library
 If you want to publish to the Godot Asset Library, you need to add the following secrets to your repository:
 
