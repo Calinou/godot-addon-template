@@ -23,7 +23,7 @@ Once you have created this PAT, you need to add it to the repository secrets as 
 #### Godot Asset Library
 If you want to publish to the Godot Asset Library, you need to add the following secrets to your repository:
 
-* `ASSET_STORE_PASSWORD` - The password for your Godot Asset Library account
+* `ASSET_LIB_PASSWORD` - The password for your Godot Asset Library account
 
 #### Itch.io
 If you want to publish to Itch.io, you need to add the following secrets to your repository:
